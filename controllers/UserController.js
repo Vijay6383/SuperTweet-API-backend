@@ -2,6 +2,8 @@ import UserModel from "../models/userModels.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken'
 
+
+
 export const getUser = async (req, res) => {
     const id = req.params.id;
 
@@ -35,7 +37,7 @@ export const getAllUsers = async (req, res) => {
 
 export const updateUser = async (req, res) => {
     const id = req.params.id;
-    const { _id , currentUserAdminStatus, password} = req.body;
+    const { _id , password} = req.body;
 
     if(id === _id) {
         try {
